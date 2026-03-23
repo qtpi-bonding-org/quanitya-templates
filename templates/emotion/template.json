@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-0000000000E0",
+    "name": "Emotion",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-00E0-000000000001",
+        "isDeleted": false,
+        "label": "Emotions",
+        "type": "multiEnum",
+        "uiElement": "chips",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": [
+          "Happy",
+          "Excited",
+          "Motivated",
+          "Proud",
+          "Calm",
+          "Content",
+          "Grateful",
+          "Peaceful",
+          "Anxious",
+          "Angry",
+          "Frustrated",
+          "Stressed",
+          "Sad",
+          "Lonely",
+          "Tired",
+          "Drained"
+        ],
+        "subFields": null,
+        "validators": [],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-00E0-A00000000001",
+    "templateId": "00000000-0000-0000-0000-0000000000E0",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83c\udfa8",
+    "palette": {
+      "accents": ["#AB47BC", "#7E57C2"],
+      "tones": ["#6A1B9A", "#4527A0"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Tag your emotions from the RULER mood meter. Select one or more.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "health",
+  "tags": ["emotion", "feelings", "mental-health", "ruler"]
+}

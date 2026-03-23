@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000040",
+    "name": "Period",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0040-000000000001",
+        "isDeleted": false,
+        "label": "Flow Intensity",
+        "type": "integer",
+        "uiElement": "slider",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 1, "max": 5 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 3
+      },
+      {
+        "id": "00000000-0000-0000-0040-000000000002",
+        "isDeleted": false,
+        "label": "Cramps",
+        "type": "integer",
+        "uiElement": "slider",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 1, "max": 5 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 1
+      },
+      {
+        "id": "00000000-0000-0000-0040-000000000004",
+        "isDeleted": false,
+        "label": "Notes",
+        "type": "text",
+        "uiElement": "textArea",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "optional",
+            "validatorData": {},
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0040-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000040",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83c\udf19",
+    "palette": {
+      "accents": ["#EC407A", "#F48FB1"],
+      "tones": ["#AD1457", "#C2185B"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": [
+    {
+      "id": "00000000-0000-0000-0040-A00000000010",
+      "name": "Period Predictor (Bayesian)",
+      "fieldId": "00000000-0000-0000-0040-000000000001",
+      "outputMode": "scalar",
+      "snippetLanguage": "js",
+      "snippet": "const MS_PER_DAY = 86400000;\nconst sortedTs = data.timestamps.slice().sort((a, b) => a - b);\nconst cycleStarts = [sortedTs[0]];\nfor (let i = 1; i < sortedTs.length; i++) {\n  const gapDays = (sortedTs[i] - sortedTs[i - 1]) / MS_PER_DAY;\n  if (gapDays > 10) cycleStarts.push(sortedTs[i]);\n}\nif (cycleStarts.length < 3) {\n  return [{ label: 'Status', value: 0, unit: 'Need 3+ cycles for prediction' }];\n}\nconst intervals = [];\nfor (let i = 1; i < cycleStarts.length; i++) {\n  intervals.push((cycleStarts[i] - cycleStarts[i - 1]) / MS_PER_DAY);\n}\nconst logIntervals = intervals.map(d => Math.log(d));\nconst mu0 = Math.log(28);\nconst kappa0 = 1;\nconst nu0 = 2;\nconst sigma0_sq = 0.04;\nconst n = logIntervals.length;\nconst xbar = ss.mean(logIntervals);\nconst S = ss.sumNthPowerDeviations(logIntervals, 2);\nconst kappa_n = kappa0 + n;\nconst mu_n = (kappa0 * mu0 + n * xbar) / kappa_n;\nconst nu_n = nu0 + n;\nconst nu_sigma_n = nu0 * sigma0_sq + S + (kappa0 * n * (xbar - mu0) ** 2) / kappa_n;\nconst sigma_n_sq = nu_sigma_n / nu_n;\nconst predScale = Math.sqrt(sigma_n_sq * (1 + 1 / kappa_n));\nconst predDf = nu_n;\nconst predictedDays = Math.exp(mu_n);\nconst tCrit = jStat.studentt.inv(0.95, predDf);\nconst logLower = mu_n - tCrit * predScale;\nconst logUpper = mu_n + tCrit * predScale;\nconst lowerDays = Math.exp(logLower);\nconst upperDays = Math.exp(logUpper);\nconst lastCycleStart = cycleStarts[cycleStarts.length - 1];\nconst predictedDate = new Date(lastCycleStart + predictedDays * MS_PER_DAY);\nconst lowerDate = new Date(lastCycleStart + lowerDays * MS_PER_DAY);\nconst upperDate = new Date(lastCycleStart + upperDays * MS_PER_DAY);\nreturn [\n  { label: 'Predicted Cycle', value: Math.round(predictedDays * 10) / 10, unit: 'days' },\n  { label: '90% CI Lower', value: Math.round(lowerDays * 10) / 10, unit: 'days' },\n  { label: '90% CI Upper', value: Math.round(upperDays * 10) / 10, unit: 'days' },\n  { label: 'Next Period', value: predictedDate.getTime(), unit: 'timestamp' },\n  { label: 'As Early As', value: lowerDate.getTime(), unit: 'timestamp' },\n  { label: 'As Late As', value: upperDate.getTime(), unit: 'timestamp' },\n  { label: 'Cycles Used', value: intervals.length, unit: 'intervals' },\n  { label: 'Observed Mean', value: Math.round(ss.mean(intervals) * 10) / 10, unit: 'days' },\n  { label: 'Data From', value: data.timestamps[0], unit: 'timestamp' },\n  { label: 'Data To', value: data.timestamps[data.timestamps.length - 1], unit: 'timestamp' }\n];",
+      "updatedAt": "2026-03-20T00:00:00.000Z"
+    }
+  ],
+  "description": "Record menstrual cycle, flow intensity, cramps, and mood.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "health",
+  "tags": ["period", "cycle", "menstrual", "health"]
+}

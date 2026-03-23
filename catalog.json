@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "categories": [
+    { "id": "health", "name": "Health" },
+    { "id": "fitness", "name": "Fitness" },
+    { "id": "nutrition", "name": "Nutrition" },
+    { "id": "productivity", "name": "Productivity" },
+    { "id": "journaling", "name": "Journaling" }
+  ],
+  "templates": [
+    {
+      "slug": "mood-energy",
+      "name": "Mood & Energy",
+      "description": "Track your daily mood and energy levels.",
+      "emoji": "\ud83d\ude0a",
+      "category": "health",
+      "tags": ["mood", "energy", "mental-health", "daily"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": true
+    },
+    {
+      "slug": "emotion",
+      "name": "Emotion",
+      "description": "Tag your emotions from the RULER mood meter. Select one or more.",
+      "emoji": "\ud83c\udfa8",
+      "category": "health",
+      "tags": ["emotion", "feelings", "mental-health", "ruler"],
+      "fields_count": 1,
+      "author": "quanitya",
+      "featured": true
+    },
+    {
+      "slug": "sleep",
+      "name": "Sleep",
+      "description": "Record sleep duration, quality, and how refreshed you feel.",
+      "emoji": "\ud83d\ude34",
+      "category": "health",
+      "tags": ["sleep", "rest", "daily"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": true
+    },
+    {
+      "slug": "habits",
+      "name": "Meditated",
+      "description": "Did you meditate today?",
+      "emoji": "\ud83e\uddd8",
+      "category": "productivity",
+      "tags": ["meditation", "habit", "mindfulness"],
+      "fields_count": 1,
+      "author": "quanitya",
+      "featured": true
+    },
+    {
+      "slug": "habit",
+      "name": "Habit",
+      "description": "Generic habit. Enter the name and mark it done.",
+      "emoji": "\u2705",
+      "category": "productivity",
+      "tags": ["habit", "routine", "daily"],
+      "fields_count": 2,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "cardio-running",
+      "name": "Running",
+      "description": "Log your runs with distance and duration.",
+      "emoji": "\ud83c\udfc3",
+      "category": "fitness",
+      "tags": ["running", "cardio", "distance", "fitness"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": true
+    },
+    {
+      "slug": "weight",
+      "name": "Weight",
+      "description": "Record body weight over time and monitor trends.",
+      "emoji": "\u2696\ufe0f",
+      "category": "fitness",
+      "tags": ["weight", "body", "fitness"],
+      "fields_count": 2,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "period-tracker",
+      "name": "Period",
+      "description": "Record menstrual cycle, flow intensity, and cramps.",
+      "emoji": "\ud83c\udf19",
+      "category": "health",
+      "tags": ["period", "cycle", "menstrual", "health"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "journal",
+      "name": "Journal",
+      "description": "Free-form daily journal. Your thoughts, encrypted and private.",
+      "emoji": "\ud83d\udcd3",
+      "category": "journaling",
+      "tags": ["journal", "diary", "writing", "reflection"],
+      "fields_count": 1,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "medication-log",
+      "name": "Medication",
+      "description": "Record medications and dosages.",
+      "emoji": "\ud83d\udc8a",
+      "category": "health",
+      "tags": ["medication", "dosage", "health"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "symptoms-health",
+      "name": "Symptoms",
+      "description": "Record symptoms, severity, and triggers.",
+      "emoji": "\ud83e\ude7a",
+      "category": "health",
+      "tags": ["symptoms", "chronic", "health", "pain"],
+      "fields_count": 4,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "cardio-swimming",
+      "name": "Swimming",
+      "description": "Track swim sessions with laps and duration.",
+      "emoji": "\ud83c\udfca",
+      "category": "fitness",
+      "tags": ["swimming", "cardio", "laps", "fitness"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "cardio-cycling",
+      "name": "Cycling",
+      "description": "Log cycling rides with distance and duration.",
+      "emoji": "\ud83d\udeb4",
+      "category": "fitness",
+      "tags": ["cycling", "cardio", "distance", "fitness"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "lifting",
+      "name": "Lifting",
+      "description": "Log weight training with sets, reps, weight, and RPE.",
+      "emoji": "\ud83d\udcaa",
+      "category": "fitness",
+      "tags": ["lifting", "weights", "strength", "gym", "fitness"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "work-productivity",
+      "name": "Productivity",
+      "description": "Record focus time and tasks completed.",
+      "emoji": "\ud83d\udcbc",
+      "category": "productivity",
+      "tags": ["work", "productivity", "focus", "tasks"],
+      "fields_count": 3,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "food",
+      "name": "Food",
+      "description": "Record calories and macronutrients.",
+      "emoji": "\ud83c\udf5e",
+      "category": "nutrition",
+      "tags": ["food", "calories", "macros", "protein", "nutrition"],
+      "fields_count": 4,
+      "author": "quanitya",
+      "featured": false
+    },
+    {
+      "slug": "water",
+      "name": "Water",
+      "description": "Record daily water intake.",
+      "emoji": "\ud83d\udca7",
+      "category": "nutrition",
+      "tags": ["water", "hydration", "nutrition"],
+      "fields_count": 1,
+      "author": "quanitya",
+      "featured": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "author": {"name": "quanitya", "url": "https://quanitya.com"},
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000050",
+    "name": "Meditated",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0050-000000000001",
+        "isDeleted": false,
+        "label": "Done",
+        "type": "boolean",
+        "uiElement": "toggleSwitch",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [],
+        "defaultValue": false
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0050-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000050",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83e\uddd8",
+    "palette": {
+      "accents": ["#7E57C2", "#9575CD"],
+      "tones": ["#4527A0", "#512DA8"]
+    },
+    "fontConfig": {"titleWeight": 600, "subtitleWeight": 400, "bodyWeight": 400},
+    "colorMappings": {},
+    "containerStyle": "zen",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Did you meditate today?",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "productivity",
+  "tags": ["meditation", "habit", "mindfulness"]
+}

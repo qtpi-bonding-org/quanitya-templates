@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000050",
+    "name": "Journal",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0050-000000000001",
+        "isDeleted": false,
+        "label": "Entry",
+        "type": "text",
+        "uiElement": "textArea",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0050-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000050",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83d\udcd3",
+    "palette": {
+      "accents": ["#8D6E63", "#A1887F"],
+      "tones": ["#4E342E", "#5D4037"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Free-form daily journal. Your thoughts, encrypted and private.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "journaling",
+  "tags": ["journal", "diary", "writing", "reflection"]
+}

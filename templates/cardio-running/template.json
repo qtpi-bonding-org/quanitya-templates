@@ -1,0 +1,100 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000080",
+    "name": "Running",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0080-000000000001",
+        "isDeleted": false,
+        "label": "Distance (km)",
+        "type": "float",
+        "uiElement": "textField",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 0, "max": 200 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-0080-000000000002",
+        "isDeleted": false,
+        "label": "Duration",
+        "type": "integer",
+        "uiElement": "timer",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 0 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-0080-000000000003",
+        "isDeleted": false,
+        "label": "Notes",
+        "type": "text",
+        "uiElement": "textArea",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "optional",
+            "validatorData": {},
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0080-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000080",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83c\udfc3",
+    "palette": {
+      "accents": ["#FF7043", "#FF8A65"],
+      "tones": ["#D84315", "#E64A19"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Log your runs with distance and duration. Track pace improvements over time.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "fitness",
+  "tags": ["running", "cardio", "distance", "fitness"]
+}

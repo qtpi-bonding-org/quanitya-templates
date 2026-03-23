@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-0000000000B0",
+    "name": "Lifting",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-00B0-000000000001",
+        "isDeleted": false,
+        "label": "Exercise",
+        "type": "text",
+        "uiElement": "textField",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-00B0-000000000002",
+        "isDeleted": false,
+        "label": "Sets",
+        "type": "group",
+        "uiElement": null,
+        "isList": true,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": [
+          {
+            "id": "00000000-0000-0000-00B0-000000000021",
+            "isDeleted": false,
+            "label": "Weight",
+            "type": "float",
+            "uiElement": "textField",
+            "isList": false,
+            "unit": null,
+            "targetTemplateId": null,
+            "options": null,
+            "subFields": null,
+            "validators": [
+              {
+                "validatorType": "numeric",
+                "validatorData": { "min": 0, "max": 1000 },
+                "validatorOrder": 0
+              }
+            ],
+            "defaultValue": null
+          },
+          {
+            "id": "00000000-0000-0000-00B0-000000000022",
+            "isDeleted": false,
+            "label": "Reps",
+            "type": "integer",
+            "uiElement": "stepper",
+            "isList": false,
+            "unit": null,
+            "targetTemplateId": null,
+            "options": null,
+            "subFields": null,
+            "validators": [
+              {
+                "validatorType": "numeric",
+                "validatorData": { "min": 0, "max": 100 },
+                "validatorOrder": 0
+              }
+            ],
+            "defaultValue": 0
+          },
+          {
+            "id": "00000000-0000-0000-00B0-000000000023",
+            "isDeleted": false,
+            "label": "RPE",
+            "type": "integer",
+            "uiElement": "slider",
+            "isList": false,
+            "unit": null,
+            "targetTemplateId": null,
+            "options": null,
+            "subFields": null,
+            "validators": [
+              {
+                "validatorType": "numeric",
+                "validatorData": { "min": 1, "max": 10 },
+                "validatorOrder": 0
+              }
+            ],
+            "defaultValue": 5
+          }
+        ],
+        "validators": [],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-00B0-000000000003",
+        "isDeleted": false,
+        "label": "Notes",
+        "type": "text",
+        "uiElement": "textArea",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "optional",
+            "validatorData": {},
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-00B0-A00000000001",
+    "templateId": "00000000-0000-0000-0000-0000000000B0",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83d\udcaa",
+    "palette": {
+      "accents": ["#78909C", "#90A4AE"],
+      "tones": ["#37474F", "#455A64"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "tech",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": [
+    {
+      "id": "00000000-0000-0000-00B0-A00000000011",
+      "name": "Volume Over Time",
+      "fieldId": "00000000-0000-0000-00B0-000000000002",
+      "outputMode": "matrix",
+      "snippetLanguage": "js",
+      "snippet": "if (data.values.length === 0) return [{label: 'Volume', values: [], timestamps: []}];\nreturn [{\n  label: 'Session Volume',\n  values: data.values.map(sets => sets.reduce((sum, s) => sum + (s.Weight || 0) * (s.Reps || 0), 0)),\n  timestamps: data.timestamps\n}];",
+      "updatedAt": "2026-03-20T00:00:00.000Z"
+    }
+  ],
+  "description": "Log weight training with sets, reps, weight, and RPE. Track progressive overload.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "fitness",
+  "tags": ["lifting", "weights", "strength", "gym", "fitness"]
+}

@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-0000000000F1",
+    "name": "Water",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-00F1-000000000001",
+        "isDeleted": false,
+        "label": "Cups",
+        "type": "integer",
+        "uiElement": "stepper",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 0, "max": 30 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 0
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-00F1-A00000000001",
+    "templateId": "00000000-0000-0000-0000-0000000000F1",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83d\udca7",
+    "palette": {
+      "accents": ["#29B6F6", "#4FC3F7"],
+      "tones": ["#0277BD", "#0288D1"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Record daily water intake.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "nutrition",
+  "tags": ["water", "hydration", "nutrition"]
+}

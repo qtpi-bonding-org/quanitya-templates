@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000070",
+    "name": "Symptoms",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0070-000000000001",
+        "isDeleted": false,
+        "label": "Symptom",
+        "type": "text",
+        "uiElement": "textField",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-0070-000000000002",
+        "isDeleted": false,
+        "label": "Severity",
+        "type": "integer",
+        "uiElement": "slider",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 1, "max": 10 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 5
+      },
+      {
+        "id": "00000000-0000-0000-0070-000000000003",
+        "isDeleted": false,
+        "label": "Trigger",
+        "type": "text",
+        "uiElement": "textField",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "optional",
+            "validatorData": {},
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      },
+      {
+        "id": "00000000-0000-0000-0070-000000000005",
+        "isDeleted": false,
+        "label": "Notes",
+        "type": "text",
+        "uiElement": "textArea",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "optional",
+            "validatorData": {},
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": null
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0070-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000070",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83e\ude7a",
+    "palette": {
+      "accents": ["#AB47BC", "#CE93D8"],
+      "tones": ["#6A1B9A", "#7B1FA2"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Record symptoms, severity, and triggers for chronic conditions.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "health",
+  "tags": ["symptoms", "chronic", "health", "pain"]
+}

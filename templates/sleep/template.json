@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "author": {
+    "name": "quanitya",
+    "url": "https://quanitya.com"
+  },
+  "template": {
+    "id": "00000000-0000-0000-0000-000000000010",
+    "name": "Sleep",
+    "fields": [
+      {
+        "id": "00000000-0000-0000-0010-000000000001",
+        "isDeleted": false,
+        "label": "Hours Slept",
+        "type": "float",
+        "uiElement": "slider",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 0, "max": 14 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 7.5
+      },
+      {
+        "id": "00000000-0000-0000-0010-000000000002",
+        "isDeleted": false,
+        "label": "Sleep Quality",
+        "type": "integer",
+        "uiElement": "slider",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [
+          {
+            "validatorType": "numeric",
+            "validatorData": { "min": 1, "max": 10 },
+            "validatorOrder": 0
+          }
+        ],
+        "defaultValue": 5
+      },
+      {
+        "id": "00000000-0000-0000-0010-000000000003",
+        "isDeleted": false,
+        "label": "Woke Up Refreshed",
+        "type": "boolean",
+        "uiElement": "toggleSwitch",
+        "isList": false,
+        "unit": null,
+        "targetTemplateId": null,
+        "options": null,
+        "subFields": null,
+        "validators": [],
+        "defaultValue": true
+      }
+    ],
+    "updatedAt": "2026-03-20T00:00:00.000Z",
+    "isArchived": false,
+    "isHidden": false
+  },
+  "aesthetics": {
+    "id": "00000000-0000-0000-0010-A00000000001",
+    "templateId": "00000000-0000-0000-0000-000000000010",
+    "themeName": null,
+    "icon": null,
+    "emoji": "\ud83d\ude34",
+    "palette": {
+      "accents": ["#5C6BC0", "#7986CB"],
+      "tones": ["#303F9F", "#3F51B5"]
+    },
+    "fontConfig": {
+      "titleWeight": 600,
+      "subtitleWeight": 400,
+      "bodyWeight": 400
+    },
+    "colorMappings": {},
+    "containerStyle": "soft",
+    "updatedAt": "2026-03-20T00:00:00.000Z"
+  },
+  "analysisScripts": null,
+  "description": "Record sleep duration, quality, and how refreshed you feel.",
+  "createdAt": "2026-03-20T00:00:00.000Z",
+  "category": "health",
+  "tags": ["sleep", "rest", "daily"]
+}
