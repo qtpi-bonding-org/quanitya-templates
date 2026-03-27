@@ -71,7 +71,7 @@
     "id": "00000000-0000-0000-0010-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000010",
     "themeName": null,
-    "icon": null,
+    "icon": "material:bedtime",
     "emoji": "\ud83d\ude34",
     "palette": {
       "accents": ["#5C6BC0", "#7986CB"],

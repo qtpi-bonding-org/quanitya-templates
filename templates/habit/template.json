@@ -42,7 +42,7 @@
     "id": "00000000-0000-0000-0051-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000051",
     "themeName": null,
-    "icon": null,
+    "icon": "material:check_circle",
     "emoji": "\u2705",
     "palette": {
       "accents": ["#66BB6A", "#81C784"],

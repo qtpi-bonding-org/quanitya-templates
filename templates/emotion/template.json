@@ -48,7 +48,7 @@
     "id": "00000000-0000-0000-00E0-A00000000001",
     "templateId": "00000000-0000-0000-0000-0000000000E0",
     "themeName": null,
-    "icon": null,
+    "icon": "material:palette",
     "emoji": "\ud83c\udfa8",
     "palette": {
       "accents": ["#AB47BC", "#7E57C2"],

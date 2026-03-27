@@ -37,7 +37,7 @@
     "id": "00000000-0000-0000-00F1-A00000000001",
     "templateId": "00000000-0000-0000-0000-0000000000F1",
     "themeName": null,
-    "icon": null,
+    "icon": "material:water_drop",
     "emoji": "\ud83d\udca7",
     "palette": {
       "accents": ["#29B6F6", "#4FC3F7"],

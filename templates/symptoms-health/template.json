@@ -91,7 +91,7 @@
     "id": "00000000-0000-0000-0070-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000070",
     "themeName": null,
-    "icon": null,
+    "icon": "material:medical_services",
     "emoji": "\ud83e\ude7a",
     "palette": {
       "accents": ["#AB47BC", "#CE93D8"],

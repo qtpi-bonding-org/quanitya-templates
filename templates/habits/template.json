@@ -28,7 +28,7 @@
     "id": "00000000-0000-0000-0050-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000050",
     "themeName": null,
-    "icon": null,
+    "icon": "material:self_improvement",
     "emoji": "\ud83e\uddd8",
     "palette": {
       "accents": ["#7E57C2", "#9575CD"],

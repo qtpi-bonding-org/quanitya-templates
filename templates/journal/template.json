@@ -31,7 +31,7 @@
     "id": "00000000-0000-0000-0050-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000050",
     "themeName": null,
-    "icon": null,
+    "icon": "material:auto_stories",
     "emoji": "\ud83d\udcd3",
     "palette": {
       "accents": ["#8D6E63", "#A1887F"],

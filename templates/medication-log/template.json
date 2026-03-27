@@ -65,7 +65,7 @@
     "id": "00000000-0000-0000-0060-A00000000001",
     "templateId": "00000000-0000-0000-0000-000000000060",
     "themeName": null,
-    "icon": null,
+    "icon": "material:medication",
     "emoji": "\ud83d\udc8a",
     "palette": {
       "accents": ["#EF5350", "#E57373"],

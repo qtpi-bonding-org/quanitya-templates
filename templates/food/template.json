@@ -97,7 +97,7 @@
     "id": "00000000-0000-0000-00F0-A00000000001",
     "templateId": "00000000-0000-0000-0000-0000000000F0",
     "themeName": null,
-    "icon": null,
+    "icon": "material:restaurant",
     "emoji": "\ud83c\udf5e",
     "palette": {
       "accents": ["#FF8A65", "#FFAB91"],
