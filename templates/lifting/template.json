@@ -47,7 +47,10 @@
             "validators": [
               {
                 "validatorType": "numeric",
-                "validatorData": { "min": 0, "max": 1000 },
+                "validatorData": {
+                  "min": 0,
+                  "max": 1000
+                },
                 "validatorOrder": 0
               }
             ],
@@ -67,7 +70,10 @@
             "validators": [
               {
                 "validatorType": "numeric",
-                "validatorData": { "min": 0, "max": 100 },
+                "validatorData": {
+                  "min": 0,
+                  "max": 100
+                },
                 "validatorOrder": 0
               }
             ],
@@ -87,7 +93,10 @@
             "validators": [
               {
                 "validatorType": "numeric",
-                "validatorData": { "min": 1, "max": 10 },
+                "validatorData": {
+                  "min": 1,
+                  "max": 10
+                },
                 "validatorOrder": 0
               }
             ],
@@ -129,8 +138,14 @@
     "icon": "material:fitness_center",
     "emoji": "\ud83d\udcaa",
     "palette": {
-      "accents": ["#78909C", "#90A4AE"],
-      "tones": ["#37474F", "#455A64"]
+      "accents": [
+        "#78909C",
+        "#90A4AE"
+      ],
+      "tones": [
+        "#37474F",
+        "#455A64"
+      ]
     },
     "fontConfig": {
       "titleWeight": 600,
@@ -149,11 +164,18 @@
       "outputMode": "matrix",
       "snippetLanguage": "js",
       "snippet": "if (data.values.length === 0) return [{label: 'Volume', values: [], timestamps: []}];\nreturn [{\n  label: 'Session Volume',\n  values: data.values.map(sets => sets.reduce((sum, s) => sum + (s.Weight || 0) * (s.Reps || 0), 0)),\n  timestamps: data.timestamps\n}];",
-      "updatedAt": "2026-03-20T00:00:00.000Z"
+      "updatedAt": "2026-03-20T00:00:00.000Z",
+      "templateId": "00000000-0000-0000-0000-0000000000B0"
     }
   ],
   "description": "Log weight training with sets, reps, weight, and RPE. Track progressive overload.",
   "createdAt": "2026-03-20T00:00:00.000Z",
   "category": "fitness",
-  "tags": ["lifting", "weights", "strength", "gym", "fitness"]
+  "tags": [
+    "lifting",
+    "weights",
+    "strength",
+    "gym",
+    "fitness"
+  ]
 }
